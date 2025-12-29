@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //coditions and loop
+        // if statement
+        maheshisindivisionD6 = true;
+        if(maheshisindivisionD6) {document.write("welcome to Div D6");}
+
+        // if.... else
+        let age=20;
+        if(age>=18) {document.write("allowd for movies")}
+        else {document.write("Not allowed for movies")}
+
+        //else......if
+        let score=82;
+        if (score>=90) {document.write("grade A")}
+        else if(score>=75) {console.log("grade B")}
+        else {console.log("grade C")}
+
+        //switch statement 
+        let role="admin"
+        switch (role){ 
+            case "admin":document.write("allow access");
+            break;
+            case "aditor":document.write("edit access");
+            break;
+            case "viewer":document.write("read only");
+            break;
+            default :document.write("no access");
+        }
+
+        // ternary operator
+        let age1 =20;
+        let result =age1>=18 ? "Adult":"Minor";
+        console.log(result);
+
+        //loops
+        //for loops
+        for (let i=1 ;i<=10;i++)
+        { console.log("5 x "+ i +" = "+(i+i*4))}
+
+        //while loop
+        let i=1;
+        while (i<=10)
+        {
+            console.log(i);
+            i++;
+        }
+
+        //do...while
+        let i1=6;
+        do{
+            console.log(i1);
+            i1++;
+        }
+        while(i1<=5);
+
+        // for of loop
+        let fruits=['apple','banana','orange'];
+        for(let fruit of fruits){
+            console.log(fruit);
+        }
+
+        //for in loop
+        let user={
+            name:"XYZ",
+            age:25,
+            city:"Ahemdabad"
+        }
+        for (let key in user){
+            console.log(key+" : "+user[key])
+        }
+
+        //push()
+        let friuts=["apple","banana"];
+        fruits.push("orange");
+        console.log(fruits);
+
+        //pop()
+        let numbers=[10,20,30,40];
+        let removed=numbers.pop();
+        console.log(numbers);
+        console.log(removed);
+
+        //map()
+        let nums=[1,2,3,4]
+        let squares=nums.map(num=>num*num);
+        console.log(squares)
+
+        //filter()
+        let ages=[12,18,25,14];
+        let adults=ages.filter(age=>age>=18);
+        console.log(adults);
+
+        //for each
+        let names=["abc","xyz","pqr"];
+        names.forEach(name=>{console.log("Hello "+name)})
+
+        //includes()
+        let colors=["red","green","blue"];
+        console.log(colors.includes("green"));
+        console.log(colors.includes("yellow"))
+
+        //find()
+        let users=[
+            {id:1, name:"ABC"},
+            {id:2, name:"PQR"},
+            {id:3, name:"CDE"}
+        ]
+        let user1=users.find(u=>u.id===2);
+        console.log(user1);
+        </script>
+</head>
+<body>
+</body>
+</html>
