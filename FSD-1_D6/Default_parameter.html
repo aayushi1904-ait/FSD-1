@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function multiply(a,b){
+            return a*b;
+        }
+        let num1=multiply(5);
+        console.log(num1)
+        let num2=multiply(5,10);
+        console.log(num2);
+
+        //pop up boxes:alert confirm & prompt
+        //alert
+        function warn(){
+            alert(" this is your worning message");
+            document.write("Warning");
+        }
+
+        //confirm
+        function conf(){
+            res=confirm("Do You wane to continue")
+            if(res==true){document.write("User wants"); 
+                return true;
+            }
+            else{
+               document.write("user does not want");
+               return false 
+            }
+        }
+
+        //prompt
+        function getval(){
+            res=prompt("Enter your name:","your name here");
+                    document.write("you entered "+res);
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="OK" onclick="warn()">
+    <input type="button" value="OK" onclick="conf()">
+    <input type="button" value="OK" onclick="getval()">
+</body>
+</html>
