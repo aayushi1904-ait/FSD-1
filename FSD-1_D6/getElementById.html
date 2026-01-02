@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- get element by id-->
+    <p id="P1"> Hello </p>
+    <script>
+        document.getElementById("P1").innerHTML= "Hi"
+    </script>
+
+    <!-- get Element by class name-->
+     <p class="C1"> paragraph </p>
+     <p class="C1"> paragraph-1 </p>
+     <script> 
+        var x=document.getElementsByClassName("C1");
+        //x[0].innerHTML=" changed ";
+
+        for(var i=0; i<x.length; i++) {
+        x[i].innerHTML=" changed using for loop";
+        }
+     </script>
+</body>
+</html>
