@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function trigerred by Event
+        function showMessage(a,b){ alert(a,b)}
+
+        //function called Explicity from jj code
+        function add(a,b){return a+b;}
+        let result =add(5,10);
+        document.write("addition = "+result)
+
+        //Automativally
+      //  (function(){document.write("this function run Automsticsllt")})();
+
+        function info(first,last){
+            var full=first+ " "+last;
+            return full;
+        }
+        function hello(){
+            var result= info('abc','xyz')
+            document.write(result);
+        }
+
+        const square=(x) =>x*x;
+        console.log(square(5));
+
+        const add1=(a,b) => a+b;
+        console.log('Addition ='+add1(5,10));
+
+        const sayHello=()=>'HELLO';
+        console.log(sayHello());
+
+        let msg='hello world'
+        console.log(msg);
+
+        let name="abc";
+        let text="Hello"+name+"!";
+        console.log(text)
+
+        let x1=5;
+        let y1=10;
+        console.log(`sum is ${x1+y1}`)
+
+        let text1="Hello\n How are you?\n Good bye";
+        console.log(text1);
+
+        let text2=`
+        Hello
+        How are you?
+        Good bye`;
+        console.log(text2)
+
+        function fun(p,q,...c){
+            console.log(p);
+            console.log(q);
+            console.log(c)
+        }
+        fun(1,2,3,4,5);
+
+        function fun(a,b,...c){
+            console.log(`${a} ${b}`);
+            console.log(c);
+            console.log(c[0]);
+            console.log(c.indexOf('pqr'));
+            console.log(c.indexOf('abc'));
+        }
+        fun('abc','def','pqr','xyz','mno','stu');
+    </script>
+</head>
+<body>
+    <input type="button" value="click me" Onclick="showMessage(5,10)">
+    <input type="button" value="info" Onclick="hello()">
+</body>
+</html>
