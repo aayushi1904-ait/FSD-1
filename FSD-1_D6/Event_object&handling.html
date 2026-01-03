@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event target
+
+    <select onchange="show(event)">
+        <option value="" readonly> select your favourite color </option>
+        <option value="red"> red </option>
+        <option value="blue"> blue </option>
+    </select>
+    <script>
+        function show(e){
+            document.body.style.backgroundColor=event.target.value;
+        }
+    </script>-->
+
+    <!-- event types 
+     <button onclick="check(event)"> click </button>
+     <script>
+        function check(e){
+            alert(e.type);
+        }
+     </script>-->
+
+     <!--event.key-->
+     <body onkeypress="keycheck(event)">
+        <script> function keycheck(e){
+            alert(`key pressed : ${e.key}`);
+        } </script>
+     </body>
+</body>
+</html>
