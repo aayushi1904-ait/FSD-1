@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //mouse up and down
+        //function down(x){}
+          //  document.getElementById('test').innerHTML="mouse down"
+          //x.innerHTML="mouseup";
+    </script>
+</head>
+<body>
+   <!--mousedown
+     <p onmousedown="down()" id="test"> Test </p>
+
+   --mouseUp
+    <p onmouseup="down(this)"> Test </p>
+
+    --inline Js
+    <p onmouseover="this.style.color='red'; this.innerHTML='mouseover';"> Test-1 </p>
+
+    --mouse events
+    <h2 onclick="alert(this.innerHTML)"> Hello !</h2>-->
+    <div onmousedown="mdown(this)" onmouseup="mup(this)"onmouseover="mover(this)" onmouseout="mout(this)";
+    style="background-color: rgb(96, 96, 129); width:70px; height: 50px; padding: 20px; 
+    border-radius: 20px; border: 10px solid rgb(150, 86, 192);"> click me </div>
+<script>
+    //mouse event
+    function mdown(e){
+    e.style.backgroundColor="yellow";
+    e.innerHTML="click";
+    }
+    function mup(e){
+    e.style.backgroundColor="pink";
+    e.innerHTML="relese";
+    }
+    function mover(e){
+    e.style.backgroundColor="blue";
+    e.innerHTML="hover";
+    }
+    function mout(e){
+    e.style.backgroundColor="green";
+    e.innerHTML="relese";
+    }
+</script>
+</body>
+</html>
