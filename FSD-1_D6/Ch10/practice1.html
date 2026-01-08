@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Username & Password Validation</title>
+  <script>
+    function validateForm() {
+      let username = document.getElementById("username").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      // Check blank
+      if (username === "" || password === "") {
+        alert("Username and Password must not be blank!");
+        return false;
+      }
+
+      // Username regex: must not start with _, @, or number
+      let usernamePattern = /^[^_@0-9][A-Za-z0-9_@]*$/;
+      if (!usernamePattern.test(username)) {
+        alert("Invalid Username: It should not start with '_', '@', or a number.");
+        return false;
+      }
+
+      // Password length check
+      if (password.length < 6 || password.length > 12) {
+        alert("Password must be between 6 and 12 characters.");
+        return false;
+      }
+
+      // If all checks pass
+      alert("Validation successful ✅");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Login Form</h2>
+  <form onsubmit="return validateForm()">
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="Enter username"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter password"><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
