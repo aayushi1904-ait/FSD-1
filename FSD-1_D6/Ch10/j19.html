@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a JS to design a login form in password 
+     minimun length must be of 8 letters and it must have some special characters -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fun() {
+        pat = /\W+/;
+        u = document.getElementById("p1").value;
+        document.write(u.length);
+        if (u.length <= 8) {
+            alert("Password must be strong...length>=8");
+        }
+        else if (!pat.test(u)) {
+            alert("Password must be strong...add one special character");
+        }
+        else {
+            alert("Password is strong");
+        }
+    }
+</script>
+
+<body>
+    <input type="password" id="p1" />
+    <input type="submit" onclick="fun()" />
+</body>
+
+</html>

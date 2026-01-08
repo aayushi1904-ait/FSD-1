@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Demo</title>
+</head>
+
+<body>
+    <h1>LocalStorage Operations</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <script>
+        localStorage.setItem('product', 'Laptop');
+        localStorage.setItem('price', 50000);
+        localStorage.setItem('discount', 10);
+
+        const product = localStorage.getItem('product');
+        console.log('Stored product:', product);
+
+        localStorage.removeItem('discount');
+
+        console.log('Updated localStorage data:');
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            console.log(`${key}: ${value}`);
+        }
+    </script>
+</body>
+
+</html>

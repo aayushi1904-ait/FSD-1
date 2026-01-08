@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(demo) {
+            val = demo.t1.value;
+            if (val == "") {
+                alert("Enter something");
+                return false;
+            }
+            alert(val);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Alert will pop up with text, Enter something if input field is empty on clicking submit button,otherwise it will print entered value on alert -->
+    <form action="#" onsubmit="fun(this)">
+        <input type="text" maxlength="10" placeholder="Enter Name" id="t1" />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Login Demo</h2>
+    <input type="text" id="uname"><br><br>
+    <button onclick="saveuser()">Save</button>
+    <button onclick="showuser()">Show</button>
+    <button onclick="clearuser()">Clear</button>
+    <p id="output"></p>
+
+    <script>
+        function saveuser() {
+            let user = document.getElementById("uname").value;
+            localStorage.setItem("username", user);
+            sessionStorage.setItem("username", user);
+        }
+
+        function showuser() {
+            let user = localStorage.getItem("username");
+            let user2 = sessionStorage.getItem("username");
+            document.getElementById("output").innerHTML = "by local storage : " + user + " by session storage : " + user2;
+        }
+
+        function clearuser() {
+            localStorage.removeItem("username");
+            sessionStorage.removeItem("username");
+        }
+    </script>
+
+</body>
+
+</html>

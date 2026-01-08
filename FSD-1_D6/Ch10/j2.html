@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fun() {
+        var obj = document.forms["f2"];
+        alert(obj.length);
+
+    }
+</script>
+
+<body>
+    <!-- Ways to access From elements
+     1.document.forms["form_name"]["element_name"].value;
+     2.document.form_name.element_name.value;
+     3.document.getElementbyId("id").value; -->
+    <form name="f2" onsubmit="fun()">
+        Username: <input type="text" name="t1" id="i1"><br><br>
+        Password: <input type="password">
+        <br><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+</body>
+
+</html>
