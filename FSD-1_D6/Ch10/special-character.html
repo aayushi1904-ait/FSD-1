@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            pat=/\W+/
+            u=document.getElementById("p1").value;
+            if(u.length<=8){
+                alert("password must be grater then 8");
+            }
+            else if(!pat.test(u)){
+                alert("password must be strong");
+            }
+            else{
+                alert("password entered :"+u);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="password" id="p1";>
+    <input type="submit" onclick="fun()">
+    
+</body>
+</html>

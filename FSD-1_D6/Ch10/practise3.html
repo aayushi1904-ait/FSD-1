@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //save
+        sessionStorage.setItem("username","lj");
+        sessionStorage.setItem("Email","lj@Example.com");
+
+        //retrive print username in console
+        let user=sessionStorage.getItem("username");
+        let email=sessionStorage.getItem("Email");
+        console.log(user);
+
+        //delete email
+        sessionStorage.removeItem("Email");
+        console.log(user)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

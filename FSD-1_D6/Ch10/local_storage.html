@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //save
+        localStorage.setItem("username","Eda");
+
+        //retrive
+        let user=localStorage.getItem("username");
+        console.log(user)
+
+        //update the data
+        localStorage.setItem("username","Riza");
+        localStorage.setItem("firstname","Olivia");
+
+        //delete 1 item
+        localStorage.removeItem("username");
+
+        //clear all data
+        localStorage.clear();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
